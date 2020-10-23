@@ -1,7 +1,7 @@
 Bacteria [] Bob;
 void setup()
 {
-  Bob = new Bacteria[100];
+  Bob = new Bacteria[500];
   for(int i = 0;i<Bob.length;i++){
   Bob[i] = new Bacteria(50,50);
   }
@@ -9,7 +9,7 @@ void setup()
 }
 void draw()
 {
-  background(0);
+  background(100);
   for(int i = 0; i< Bob.length;i++){
   Bob[i].show();
   Bob[i].walk();
@@ -21,9 +21,12 @@ class Bacteria
   Bacteria(int x,int y){
   myX=x;
   myY=y;
-  mySize = 50;
+  mySize = ((int)((Math.random()*30)+10));
   }
   void show(){
+    int myColor =  color ((int)(Math.random()*255),(color)(int)(Math.random()*255),(color)(int)(Math.random()*255));
+    fill(myColor,10);
+    stroke(myColor);
     ellipse(myX,myY,mySize,mySize);   
   }
   void walk(){
