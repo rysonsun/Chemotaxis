@@ -24,7 +24,7 @@ class Bacteria
   mySize = ((int)((Math.random()*30)+10));
   }
   void show(){
-    int myColor =  color ((int)(Math.random()*255),(color)(int)(Math.random()*255),(color)(int)(Math.random()*255));
+  int myColor =  color ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     fill(myColor,10);
     stroke(myColor);
     ellipse(myX,myY,mySize,mySize);   
